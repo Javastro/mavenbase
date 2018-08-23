@@ -1,2 +1,3 @@
 # mavenbase
-base maven pom for maven builds
+
+base maven POM for maven builds in the javastro suite of software.
