@@ -8,8 +8,8 @@
    <artifactId>javastro-mavenbase</artifactId>
    <version>0.3</version>
    <packaging>pom</packaging>
-   <name>Javastro</name>
-   <description>A collection of java based astronomical software</description>
+   <name>mavenbase</name>
+   <description>A collection of JVM based astronomical software</description>
    <url>http://javastro.github.io</url>
    <inceptionYear>2010</inceptionYear>
    <properties>
@@ -18,6 +18,25 @@
       <jaxb-ri.version>2.2.11</jaxb-ri.version>
       <jaxb-api.version>2.2.12</jaxb-api.version>
    </properties>
+   <licenses>
+      <license>
+         <url>https://www.gnu.org/licenses/agpl-3.0.html</url>
+         <name>AGPL-3.0</name>
+      </license>
+   </licenses>
+   <organization>
+      <name>JBCA, University of Manchester</name>
+      <url>http://www.jb.man.ac.uk/</url>
+   </organization>
+   <scm>
+      <url>https://github.com/Javastro/${project.name}</url>
+      <connection>scm:git:git://github.com/Javastro/${project.name}.git</connection>
+      <developerConnection>scm:git:git@github.com:Javastro/${project.name}.git</developerConnection>
+   </scm>
+   <issueManagement>
+      <url>https://github.com/Javastro/${project.name}/issues</url>
+   </issueManagement>
+   
    <developers>
       <developer>
          <id>pah</id>
@@ -200,6 +219,8 @@
          </plugins>
       </pluginManagement>
       <plugins>
+         
+      
          <plugin>
             <artifactId>maven-site-plugin</artifactId>
             <configuration>
@@ -450,16 +471,95 @@
       </plugins>
    </reporting>
    <distributionManagement>
-      <downloadUrl>http://astrogrid.jb.man.ac.uk/maven/</downloadUrl>
-      <site>
-         <id>jastro</id>
-         <name>Javastro Site</name>
-         <url>scpexe://astrogrid.jb.man.ac.uk/local/www/root/html/javastro/</url>
-      </site>
-      <repository>
-         <id>javastro</id>
-         <name>Javastro Repository</name>
-         <url>scpexe://astrogrid.jb.man.ac.uk/local/www/root/html/maven/</url>
-      </repository>
+      <snapshotRepository>
+         <id>ossrh</id>
+         <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+      </snapshotRepository>
    </distributionManagement>
+      <profiles>
+      <profile>
+         <id>release</id>
+         <build>
+            <plugins>
+               <plugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-javadoc-plugin</artifactId>
+                  <executions>
+                     <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                           <goal>jar</goal>
+                        </goals>
+                        <configuration>
+                           <additionalparam>-Xdoclint:none</additionalparam>
+                           <failOnError>false</failOnError>
+                           <!-- 
+                              Javadoc 8 became much more strict by default - switch this off -->
+                        </configuration>
+                     </execution>
+                  </executions>
+               </plugin>
+               <plugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-gpg-plugin</artifactId>
+                  <version>1.6</version>
+                  <executions>
+                     <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                           <goal>sign</goal>
+                        </goals>
+                     </execution>
+                  </executions>
+               </plugin>
+               <plugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-source-plugin</artifactId>
+                  <executions>
+                     <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                           <goal>jar-no-fork</goal>
+                        </goals>
+                     </execution>
+                  </executions>
+               </plugin>
+               <plugin>
+                  <groupId>org.sonatype.plugins</groupId>
+                  <artifactId>nexus-staging-maven-plugin</artifactId>
+                  <version>1.6.7</version>
+                  <extensions>true</extensions>
+                  <configuration>
+                     <serverId>ossrh</serverId>
+                     <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                     <autoReleaseAfterClose>false</autoReleaseAfterClose>
+                  </configuration>
+               </plugin>
+<!-- not yet
+               <plugin>
+                  <groupId>com.github.github</groupId>
+                  <artifactId>site-maven-plugin</artifactId>
+                  <version>0.12</version>
+                  <configuration>
+                     <message>Building site for ${project.version}</message>
+                  </configuration>
+                  <executions>
+                     <execution>
+                        <goals>
+                           <goal>site</goal>
+                        </goals>
+                        <phase>site-deploy</phase>
+                        <configuration>
+                           <merge>true</merge>
+                        </configuration>
+                     </execution>
+                  </executions>
+               </plugin>
+ -->
+            </plugins>
+         </build>
+      </profile>
+   </profiles>
+   
 </project>
