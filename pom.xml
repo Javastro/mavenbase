@@ -5,16 +5,16 @@
 >
    <modelVersion>4.0.0</modelVersion>
    <groupId>org.javastro</groupId>
-   <artifactId>javastro-suite</artifactId>
-   <version>0.2</version>
+   <artifactId>javastro-mavenbase</artifactId>
+   <version>0.3</version>
    <packaging>pom</packaging>
    <name>Javastro</name>
    <description>A collection of java based astronomical software</description>
    <url>http://javastro.github.io</url>
    <inceptionYear>2010</inceptionYear>
    <properties>
-      <eclipselink.version>2.5.2</eclipselink.version>
-      <jackson.version>2.8.11.1</jackson.version>
+      <eclipselink.version>2.7.4</eclipselink.version>
+      <jackson.version>2.9.9</jackson.version>
       <jaxb-ri.version>2.2.11</jaxb-ri.version>
       <jaxb-api.version>2.2.12</jaxb-api.version>
    </properties>
