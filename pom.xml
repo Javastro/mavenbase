@@ -6,7 +6,7 @@
    <modelVersion>4.0.0</modelVersion>
    <groupId>org.javastro</groupId>
    <artifactId>javastro-mavenbase</artifactId>
-   <version>0.3</version>
+   <version>0.3.1</version>
    <packaging>pom</packaging>
    <name>mavenbase</name>
    <description>A collection of JVM based astronomical software</description>
@@ -71,7 +71,7 @@
             <plugin>
                <groupId>org.apache.maven.plugins</groupId>
                <artifactId>maven-source-plugin</artifactId>
-               <version>3.0.0</version>
+               <version>3.0.1</version>
             </plugin>
             <plugin>
                <groupId>org.apache.maven.plugins</groupId>
@@ -254,14 +254,13 @@
             <executions>
                <execution>
                   <id>attach-sources</id>
-                  <phase>verify</phase>
                   <goals>
                      <goal>jar</goal>
                   </goals>
                </execution>
             </executions>
          </plugin>
- <!--dont do my default        <plugin>
+ <!--dont do by default        <plugin>
             <groupId>net.alchim31.maven</groupId>
             <artifactId>scala-maven-plugin</artifactId>
             <executions>
@@ -528,7 +527,7 @@
                <plugin>
                   <groupId>org.sonatype.plugins</groupId>
                   <artifactId>nexus-staging-maven-plugin</artifactId>
-                  <version>1.6.7</version>
+                  <version>1.6.8</version>
                   <extensions>true</extensions>
                   <configuration>
                      <serverId>ossrh</serverId>
