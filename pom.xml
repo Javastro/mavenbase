@@ -6,7 +6,7 @@
    <modelVersion>4.0.0</modelVersion>
    <groupId>org.javastro</groupId>
    <artifactId>javastro-mavenbase</artifactId>
-   <version>0.3.1</version>
+   <version>0.3.2</version>
    <packaging>pom</packaging>
    <name>mavenbase</name>
    <description>A collection of JVM based astronomical software</description>
@@ -323,17 +323,17 @@
             <version>${jaxb-api.version}</version>
          </dependency>
          <dependency>
-            <groupId>com.sun.xml.bind</groupId>
+            <groupId>org.glassfish.jaxb</groupId>
             <artifactId>jaxb-impl</artifactId>
             <version>${jaxb-ri.version}</version>
          </dependency>
          <dependency>
-            <groupId>com.sun.xml.bind</groupId>
+            <groupId>org.glassfish.jaxb</groupId>
             <artifactId>jaxb-xjc</artifactId>
             <version>${jaxb-ri.version}</version>
          </dependency>
          <dependency>
-            <groupId>com.sun.xml.bind</groupId>
+            <groupId>org.glassfish.jaxb</groupId>
             <artifactId>jaxb-core</artifactId>
             <version>${jaxb-ri.version}</version>
          </dependency>
