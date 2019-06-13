@@ -6,17 +6,17 @@
    <modelVersion>4.0.0</modelVersion>
    <groupId>org.javastro</groupId>
    <artifactId>javastro-mavenbase</artifactId>
-   <version>0.3.2</version>
+   <version>0.3.3</version>
    <packaging>pom</packaging>
    <name>mavenbase</name>
    <description>A collection of JVM based astronomical software</description>
    <url>http://javastro.github.io</url>
    <inceptionYear>2010</inceptionYear>
    <properties>
-      <eclipselink.version>2.7.4</eclipselink.version>
+      <eclipselink.version>2.6.6</eclipselink.version>
       <jackson.version>2.9.9</jackson.version>
-      <jaxb-ri.version>2.2.11</jaxb-ri.version>
-      <jaxb-api.version>2.2.12</jaxb-api.version>
+      <jaxb-ri.version>2.3.0.1</jaxb-ri.version>
+      <jaxb-api.version>2.3.1</jaxb-api.version>
    </properties>
    <licenses>
       <license>
@@ -324,7 +324,7 @@
          </dependency>
          <dependency>
             <groupId>org.glassfish.jaxb</groupId>
-            <artifactId>jaxb-impl</artifactId>
+            <artifactId>jaxb-runtime</artifactId>
             <version>${jaxb-ri.version}</version>
          </dependency>
          <dependency>
