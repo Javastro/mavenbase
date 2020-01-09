@@ -6,7 +6,7 @@
    <modelVersion>4.0.0</modelVersion>
    <groupId>org.javastro</groupId>
    <artifactId>javastro-mavenbase</artifactId>
-   <version>0.3.3</version>
+   <version>0.3.4</version>
    <packaging>pom</packaging>
    <name>mavenbase</name>
    <description>A collection of JVM based astronomical software</description>
@@ -17,6 +17,8 @@
       <jackson.version>2.9.10.1</jackson.version>
       <jaxb-ri.version>2.3.0.1</jaxb-ri.version>
       <jaxb-api.version>2.3.1</jaxb-api.version>
+      <ivoa-schema.version>0.9.2-SNAPSHOT</ivoa-schema.version>
+      
    </properties>
    <licenses>
       <license>
@@ -240,7 +242,7 @@
             <configuration>
                <argLine>-ea -noverify</argLine> <!-- the noverify is a hack to get rid of java.lang.VerifyError: Expecting 
                   a stackmap frame at branch target errors - possibly introduced by the cobertura -->
-               <testFailureIgnore>true</testFailureIgnore>
+               <testFailureIgnore>false</testFailureIgnore>
                <includes>
                   <include>**/*Test.java</include>
                </includes>
@@ -304,10 +306,7 @@
       <dependency>
          <groupId>ch.qos.logback</groupId>
          <artifactId>logback-classic</artifactId>
-      </dependency>
-      <dependency>
-         <groupId>org.slf4j</groupId>
-         <artifactId>log4j-over-slf4j</artifactId>
+         <scope>test</scope>
       </dependency>
       <dependency>
          <groupId>junit</groupId>
@@ -340,17 +339,12 @@
          <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.6.1</version>
+            <version>1.7.25</version>
          </dependency>
          <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>0.9.29</version>
-         </dependency>
-         <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>log4j-over-slf4j</artifactId>
-            <version>1.7.12</version>
+            <version>1.2.3</version>
          </dependency>
          <dependency>
             <groupId>junit</groupId>
@@ -424,7 +418,7 @@
          <plugin>
             <artifactId>maven-surefire-report-plugin</artifactId>
             <configuration>
-               <testFailureIgnore>true</testFailureIgnore>
+               <testFailureIgnore>false</testFailureIgnore>
             </configuration>
          </plugin>
          <plugin>
