@@ -14,7 +14,7 @@
    <inceptionYear>2010</inceptionYear>
    <properties>
       <eclipselink.version>2.6.6</eclipselink.version>
-      <jackson.version>2.9.10.3</jackson.version>
+      <jackson.version>2.9.10.4</jackson.version>
       <jaxb-ri.version>2.3.0.1</jaxb-ri.version>
       <jaxb-api.version>2.3.1</jaxb-api.version>
       <ivoa-schema.version>0.9.2-SNAPSHOT</ivoa-schema.version>
