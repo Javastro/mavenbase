@@ -6,7 +6,7 @@
    <modelVersion>4.0.0</modelVersion>
    <groupId>org.javastro</groupId>
    <artifactId>bom</artifactId>
-   <version>0.4.0-SNAPSHOT</version>
+   <version>0.4.0</version>
    <packaging>pom</packaging>
    <name>bom</name>
    <description>Versions of the Javastro Software</description>
@@ -20,6 +20,7 @@
    <build>
    </build>
    <dependencyManagement>
+    <!-- the javastro modules -->
          <dependencies>
            <dependency>
             <groupId>org.javastro</groupId>
@@ -29,8 +30,18 @@
           <dependency> 
             <groupId>org.javastro</groupId>
             <artifactId>ivoa-schema</artifactId>
-            <version>0.9.3-SNAPSHOT</version>
+            <version>0.9.3</version>
          </dependency>
+          <dependency> 
+            <groupId>org.javastro</groupId>
+            <artifactId>ivoa-entities</artifactId>
+            <version>0.9.3</version>
+         </dependency>
+       <dependency> 
+         <groupId>org.javastro</groupId>
+         <artifactId>jaxbjpa-utils</artifactId>
+         <version>0.1</version>
+      </dependency>
       
       <!-- important external dependencies -->
          <dependency>
@@ -84,7 +95,12 @@
             <version>10.11.1.1</version>
             <scope>test</scope>
          </dependency>
-         <dependency>
+          <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+            <version>2.2.3</version>
+         </dependency>
+        <dependency>
             <groupId>org.eclipse.persistence</groupId>
             <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
             <version>${eclipselink.version}</version>
@@ -97,6 +113,11 @@
          <dependency>
             <groupId>org.eclipse.persistence</groupId>
             <artifactId>org.eclipse.persistence.jpa</artifactId>
+            <version>${eclipselink.version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>org.eclipse.persistence.moxy</artifactId>
             <version>${eclipselink.version}</version>
          </dependency>
          <dependency>
@@ -121,6 +142,32 @@
          </dependency>
       </dependencies>
    </dependencyManagement>
+   <url>https://javastro.github.io</url>
+   <licenses>
+      <license>
+         <url>https://www.gnu.org/licenses/agpl-3.0.html</url>
+         <name>AGPL-3.0</name>
+      </license>
+   </licenses>
+   <scm>
+      <url>https://github.com/Javastro/mavenbase</url>
+      <connection>scm:git:git://github.com/Javastro/mavenbase.git</connection>
+      <developerConnection>scm:git:git@github.com:Javastro/mavenbase.git</developerConnection>
+   </scm>
+   <developers>
+      <developer>
+         <id>pah</id>
+         <name>Paul Harrison</name>
+         <email>paul.harrison@manchester.ac.uk</email>
+         <organization>Manchester University, JBCA</organization>
+         <organizationUrl>http://www.jb.man.ac.uk/</organizationUrl>
+         <roles>
+            <role>Developer</role>
+            <role>Admin</role>
+         </roles>
+      </developer>
+   </developers>
+
    <distributionManagement>
       <snapshotRepository>
          <id>ossrh</id>

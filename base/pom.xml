@@ -6,11 +6,11 @@
    <modelVersion>4.0.0</modelVersion>
    <groupId>org.javastro</groupId>
    <artifactId>javastro-mavenbase</artifactId>
-   <version>0.4.0-SNAPSHOT</version>
+   <version>0.4.0</version>
    <packaging>pom</packaging>
    <name>mavenbase</name>
    <description>Base POM for a collection of JVM based astronomical software</description>
-   <url>http://javastro.github.io</url>
+   <url>https://javastro.github.io</url>
    <inceptionYear>2010</inceptionYear>
    <properties>
    <!-- these have to be repeated from the bom unfortunately - perhaps resolve in bom -->
@@ -20,6 +20,17 @@
       <jaxb-api.version>2.3.1</jaxb-api.version>
       
    </properties>
+   <dependencyManagement>
+     <dependencies>
+         <dependency>
+            <groupId>org.javastro</groupId>
+            <artifactId>bom</artifactId>
+            <version>0.4.0</version>
+            <type>pom</type>
+            <scope>import</scope>
+         </dependency>
+      </dependencies>
+   </dependencyManagement>
    <licenses>
       <license>
          <url>https://www.gnu.org/licenses/agpl-3.0.html</url>
@@ -298,6 +309,7 @@
          </extension>
       </extensions>
    </build>
+   
    <dependencies>
       <dependency>
          <groupId>org.slf4j</groupId>
@@ -319,17 +331,6 @@
           <scope>test</scope>
        </dependency>
    </dependencies>
-   <dependencyManagement>
-     <dependencies>
-         <dependency>
-            <groupId>org.javastro</groupId>
-            <artifactId>bom</artifactId>
-            <version>0.4.0-SNAPSHOT</version>
-            <type>pom</type>
-            <scope>import</scope>
-         </dependency>
-      </dependencies>
-   </dependencyManagement>
    <reporting>
       <plugins>
          <plugin>
