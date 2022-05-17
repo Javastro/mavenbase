@@ -1,6 +1,6 @@
 # mavenbase
 
-[![Build Status](https://travis-ci.org/javastro/mavenbase.svg?branch=master)](https://travis-ci.org/javastro/mavenbase)
+
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.javastro/javastro-mavenbase/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.javastro/javastro-mavenbase/)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.javastro/bom/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.javastro/bom/)
 
