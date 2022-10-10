@@ -6,13 +6,13 @@
    <modelVersion>4.0.0</modelVersion>
    <groupId>org.javastro</groupId>
    <artifactId>bom</artifactId>
-   <version>0.4.0</version>
+   <version>0.4.1</version>
    <packaging>pom</packaging>
    <name>bom</name>
    <description>Versions of the Javastro Software</description>
    <properties>
       <eclipselink.version>2.6.6</eclipselink.version>
-      <jackson.version>2.12.6.1</jackson.version>
+      <jackson.version>2.13.4</jackson.version>
       <jaxb-ri.version>2.3.0.1</jaxb-ri.version>
       <jaxb-api.version>2.3.1</jaxb-api.version>
       
@@ -40,7 +40,7 @@
        <dependency> 
          <groupId>org.javastro</groupId>
          <artifactId>jaxbjpa-utils</artifactId>
-         <version>0.1</version>
+         <version>0.1.2</version>
       </dependency>
       
       <!-- important external dependencies -->
@@ -226,7 +226,7 @@
                <plugin>
                   <groupId>org.sonatype.plugins</groupId>
                   <artifactId>nexus-staging-maven-plugin</artifactId>
-                  <version>1.6.8</version>
+                  <version>1.6.13</version>
                   <extensions>true</extensions>
                   <configuration>
                      <serverId>ossrh</serverId>

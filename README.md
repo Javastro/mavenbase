@@ -1,8 +1,9 @@
 # mavenbase
 
 
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.javastro/javastro-mavenbase/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.javastro/javastro-mavenbase/)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.javastro/bom/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.javastro/bom/)
+[![Maven Central](https://img.shields.io/maven-central/v/org.javastro/javastro-mavenbase.svg?Label=javastro-mavenbase)](https://search.maven.org/artifact/org.javastro/javastro-mavenbase/)
+
+[![Maven Central](https://img.shields.io/maven-central/v/org.javastro/bom.svg?Label=BOM)](https://search.maven.org/artifact/org.javastro/bom/)
 
 Base maven POM for the maven builds in the javastro suite of software. Since version 0.4.0 this has been refactored to save out the BOM separately.
 
