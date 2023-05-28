@@ -6,15 +6,15 @@
    <modelVersion>4.0.0</modelVersion>
    <groupId>org.javastro</groupId>
    <artifactId>bom</artifactId>
-   <version>0.4.1</version>
+   <version>0.5.0</version>
    <packaging>pom</packaging>
    <name>bom</name>
    <description>Versions of the Javastro Software</description>
    <properties>
-      <eclipselink.version>2.6.6</eclipselink.version>
-      <jackson.version>2.13.4</jackson.version>
-      <jaxb-ri.version>2.3.0.1</jaxb-ri.version>
-      <jaxb-api.version>2.3.1</jaxb-api.version>
+      <eclipselink.version>2.7.7</eclipselink.version>
+      <jackson.version>2.15.1</jackson.version>
+      <jaxb-ri.version>2.3.7</jaxb-ri.version>
+      <jaxb-api.version>2.3.3</jaxb-api.version>
       
    </properties>
    <build>
@@ -28,14 +28,14 @@
             <version>20210512</version>
          </dependency>
           <dependency> 
-            <groupId>org.javastro</groupId>
+            <groupId>org.javastro.ivoa</groupId>
             <artifactId>ivoa-schema</artifactId>
-            <version>0.9.3</version>
+            <version>0.9.4</version>
          </dependency>
           <dependency> 
-            <groupId>org.javastro</groupId>
+            <groupId>org.javastro.ivoa</groupId>
             <artifactId>ivoa-entities</artifactId>
-            <version>0.9.3</version>
+            <version>0.9.4</version>
          </dependency>
        <dependency> 
          <groupId>org.javastro</groupId>
@@ -138,7 +138,7 @@
          <dependency>
             <groupId>org.jvnet.jaxb2_commons</groupId>
             <artifactId>jaxb2-basics-runtime</artifactId>
-            <version>0.11.1</version>
+            <version>0.13.1</version>
          </dependency>
       </dependencies>
    </dependencyManagement>
@@ -156,7 +156,7 @@
    </scm>
    <developers>
       <developer>
-         <id>pah</id>
+         <id>pahjbo</id>
          <name>Paul Harrison</name>
          <email>paul.harrison@manchester.ac.uk</email>
          <organization>Manchester University, JBCA</organization>
