@@ -15,7 +15,7 @@
       <jackson.version>2.15.1</jackson.version>
       <jaxb-ri.version>2.3.7</jaxb-ri.version>
       <jaxb-api.version>2.3.3</jaxb-api.version>
-      
+
    </properties>
    <build>
    </build>

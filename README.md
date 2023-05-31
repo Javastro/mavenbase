@@ -1,7 +1,6 @@
 # mavenbase
 
 
-
 [![Maven Central](https://img.shields.io/maven-central/v/org.javastro/javastro-mavenbase?Label=javastro-mavenbase)](https://search.maven.org/artifact/org.javastro/javastro-mavenbase/)
 
 [![Maven Central](https://img.shields.io/maven-central/v/org.javastro/bom?Label=BOM)](https://search.maven.org/artifact/org.javastro/bom/)
