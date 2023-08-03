@@ -6,7 +6,7 @@
    <modelVersion>4.0.0</modelVersion>
    <groupId>org.javastro</groupId>
    <artifactId>javastro-mavenbase</artifactId>
-   <version>0.5.0</version>
+   <version>0.6.0</version>
    <packaging>pom</packaging>
    <name>mavenbase</name>
    <description>Base POM for a collection of JVM based astronomical software</description>
@@ -16,8 +16,8 @@
    <!-- these have to be repeated from the bom unfortunately - perhaps resolve in bom -->
       <eclipselink.version>2.7.7</eclipselink.version>
       <jackson.version>2.15.1</jackson.version>
-      <jaxb-ri.version>2.3.7</jaxb-ri.version>
-      <jaxb-api.version>2.3.3</jaxb-api.version>
+      <jaxb-ri.version>4.0.2</jaxb-ri.version>
+      <jaxb-api.version>4.0.0</jaxb-api.version>
       
    </properties>
    <dependencyManagement>
@@ -25,7 +25,7 @@
          <dependency>
             <groupId>org.javastro</groupId>
             <artifactId>bom</artifactId>
-            <version>0.5.0</version>
+            <version>0.6.0</version>
             <type>pom</type>
             <scope>import</scope>
          </dependency>
@@ -176,6 +176,11 @@
             </plugin>
             <plugin>
                <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-assembly-plugin</artifactId>
+               <version>3.6.0</version>
+            </plugin>
+            <plugin>
+               <groupId>org.apache.maven.plugins</groupId>
                <artifactId>maven-surefire-report-plugin</artifactId>
                <version>3.1.0</version>
             </plugin>
@@ -243,8 +248,7 @@
             <artifactId>maven-compiler-plugin</artifactId>
             <configuration>
                <showDeprecation>true</showDeprecation>
-               <source>1.8</source>
-               <target>1.8</target>
+               <release>11</release>
                <verbose>false</verbose>
             </configuration>
          </plugin>
