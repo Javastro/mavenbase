@@ -14,6 +14,7 @@
    <inceptionYear>2010</inceptionYear>
    <properties>
    <!-- these have to be repeated from the bom unfortunately - perhaps resolve in bom -->
+      <hibernate.version>6.2.7.Final</hibernate.version>
       <eclipselink.version>2.7.7</eclipselink.version>
       <jackson.version>2.15.1</jackson.version>
       <jaxb-ri.version>4.0.2</jaxb-ri.version>
@@ -110,10 +111,9 @@
                <version>3.6.0</version>
             </plugin>
             <plugin>
-               <groupId>org.jvnet.jaxb2.maven2</groupId>
-               <artifactId>maven-jaxb23-plugin</artifactId>
-               <version>0.15.3</version><!-- 0.12.3 avoids the problem with 
-                  the non-reading of xjc schema -->
+               <groupId>org.jvnet.jaxb</groupId>
+               <artifactId>jaxb-maven-plugin</artifactId>
+               <version>2.0.3</version>
                <configuration>
                   <plugins>
                       <plugin> <!-- basics plugin -->
