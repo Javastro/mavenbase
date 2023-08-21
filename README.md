@@ -21,7 +21,7 @@ then deploy to the staging repository
 
 if this is successful then
 
-	mvn nexus-staging:release -P release
+	mvn nexus-staging:release -P release -pl base,bom
 
 will release to the central repository
 
