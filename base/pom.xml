@@ -6,7 +6,7 @@
    <modelVersion>4.0.0</modelVersion>
    <groupId>org.javastro</groupId>
    <artifactId>javastro-mavenbase</artifactId>
-   <version>0.6.0</version>
+   <version>0.6.1</version>
    <packaging>pom</packaging>
    <name>mavenbase</name>
    <description>Base POM for a collection of JVM based astronomical software</description>
@@ -271,8 +271,9 @@
             <executions>
                <execution>
                   <id>attach-sources</id>
+                  <phase>verify</phase>
                   <goals>
-                     <goal>jar</goal>
+                     <goal>jar-no-fork</goal>
                   </goals>
                </execution>
             </executions>
@@ -435,11 +436,11 @@
                <plugin>
                   <groupId>org.apache.maven.plugins</groupId>
                   <artifactId>maven-gpg-plugin</artifactId>
-                  <version>1.6</version>
+                  <version>3.1.0</version>
                   <executions>
                      <execution>
                         <id>sign-artifacts</id>
-                        <phase>verify</phase>
+                        <phase>deploy</phase>
                         <goals>
                            <goal>sign</goal>
                         </goals>
@@ -451,6 +452,7 @@
                   <artifactId>maven-source-plugin</artifactId>
                   <executions>
                      <execution>
+                        <phase>verify</phase>
                         <id>attach-sources</id>
                         <goals>
                            <goal>jar-no-fork</goal>
