@@ -199,14 +199,14 @@
                <groupId>org.apache.maven.plugins</groupId>
                <artifactId>maven-javadoc-plugin</artifactId>
                <version>3.3.0</version>
-               <dependencies>
+ <!--  not distributed?            <dependencies>
                   <dependency>
                      <groupId>com.yworks.umldoclet</groupId>
                      <artifactId>ydoc</artifactId>
                      <version>3.0</version>
                      <scope>compile</scope>
                   </dependency>
-               </dependencies>
+               </dependencies> -->
             </plugin>
             <plugin>
                <groupId>org.jacoco</groupId>
