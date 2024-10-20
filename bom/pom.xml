@@ -6,7 +6,7 @@
    <modelVersion>4.0.0</modelVersion>
    <groupId>org.javastro</groupId>
    <artifactId>bom</artifactId>
-   <version>0.6.2</version>
+   <version>0.6.4</version>
    <packaging>pom</packaging>
    <name>bom</name>
    <description>Versions of the Javastro Software</description>
@@ -31,17 +31,17 @@
           <dependency> 
             <groupId>org.javastro.ivoa</groupId>
             <artifactId>ivoa-schema</artifactId>
-            <version>0.9.6</version>
+            <version>0.9.8</version>
          </dependency>
           <dependency> 
             <groupId>org.javastro.ivoa</groupId>
             <artifactId>ivoa-entities</artifactId>
-            <version>0.9.6</version>
+            <version>0.9.8</version>
          </dependency>
        <dependency> 
          <groupId>org.javastro</groupId>
          <artifactId>jaxbjpa-utils</artifactId>
-         <version>0.2.1</version>
+         <version>0.2.3</version>
       </dependency>
       
       <!-- important external dependencies -->
