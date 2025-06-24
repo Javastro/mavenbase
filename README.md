@@ -21,8 +21,8 @@ then deploy to the staging repository
 
 if this is successful then
 
-	mvn nexus-staging:release -P release -pl base,bom
+	mvn -P release deploy -pl base,bom
 
-will release to the central repository
+will release to the central repository https://central.sonatype.com/publishing/deployments
 
 

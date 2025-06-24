@@ -15,14 +15,32 @@
    </modules>
    <build>
       <plugins>
-         <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-deploy-plugin</artifactId>
-            <version>3.1.1</version>
+<!--         <plugin>
+            <groupId>org.sonatype.central</groupId>
+            <artifactId>central-publishing-maven-plugin</artifactId>
+            <version>0.7.0</version>
             <configuration>
-               <skip>true</skip>
+               <skipPublising>true</skipPublising>
             </configuration>
          </plugin>
-      </plugins>
+-->      </plugins>
    </build>
+   <profiles>
+      <profile>
+         <id>release</id>
+         <build>
+          <plugins>
+              <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.7.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                  <publishingServerId>central</publishingServerId>
+                </configuration>
+              </plugin>
+          </plugins>
+        </build>
+      </profile>
+   </profiles>
 </project>
