@@ -15,14 +15,10 @@ Check that the build and tests are passed
 
 	mvn clean install
 
-then deploy to the staging repository
-   
-	mvn deploy -P release
-
 if this is successful then
 
 	mvn -P release deploy -pl base,bom
 
 will release to the central repository https://central.sonatype.com/publishing/deployments
-
+where the release should be manually confirmed.
 
