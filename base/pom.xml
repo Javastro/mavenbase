@@ -6,7 +6,7 @@
    <modelVersion>4.0.0</modelVersion>
    <groupId>org.javastro</groupId>
    <artifactId>javastro-mavenbase</artifactId>
-   <version>2025.1</version>
+   <version>2025.2</version>
    <packaging>pom</packaging>
    <name>mavenbase</name>
    <description>Base POM for a collection of JVM based astronomical software</description>
@@ -26,7 +26,7 @@
          <dependency>
             <groupId>org.javastro</groupId>
             <artifactId>bom</artifactId>
-            <version>2025.1</version>
+            <version>2025.2</version>
             <type>pom</type>
             <scope>import</scope>
          </dependency>
@@ -158,7 +158,7 @@
             <plugin>
                <groupId>org.apache.maven.plugins</groupId>
                <artifactId>maven-surefire-plugin</artifactId>
-               <version>3.1.0</version>
+               <version>3.5.3</version>
             </plugin>
             <plugin>
                <groupId>org.apache.maven.plugins</groupId>
@@ -168,7 +168,7 @@
             <plugin>
                <groupId>org.apache.maven.plugins</groupId>
                <artifactId>maven-surefire-report-plugin</artifactId>
-               <version>3.1.0</version>
+               <version>3.5.3</version>
             </plugin>
             <plugin>
                <groupId>org.apache.maven.plugins</groupId>
@@ -314,11 +314,6 @@
          <groupId>ch.qos.logback</groupId>
          <artifactId>logback-classic</artifactId>
          <scope>test</scope>
-      </dependency>
-      <dependency>
-          <groupId>org.junit.vintage</groupId>
-          <artifactId>junit-vintage-engine</artifactId>
-          <scope>test</scope>
       </dependency>
        <dependency>
           <groupId>org.junit.jupiter</groupId>

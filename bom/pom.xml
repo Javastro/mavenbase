@@ -6,7 +6,7 @@
    <modelVersion>4.0.0</modelVersion>
    <groupId>org.javastro</groupId>
    <artifactId>bom</artifactId>
-   <version>2025.1</version>
+   <version>2025.2</version>
    <packaging>pom</packaging>
    <name>bom</name>
    <description>Versions of the Javastro Software</description>
@@ -41,7 +41,7 @@
        <dependency> 
          <groupId>org.javastro</groupId>
          <artifactId>jaxbjpa-utils</artifactId>
-         <version>0.2.3</version>
+         <version>0.2.4</version>
       </dependency>
       
       <!-- important external dependencies -->
@@ -79,11 +79,6 @@
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>1.5.18</version>
-         </dependency>
-         <dependency>
-             <groupId>org.junit.vintage</groupId>
-             <artifactId>junit-vintage-engine</artifactId>
-             <version>5.7.2</version>
          </dependency>
          <dependency>
              <groupId>org.junit.jupiter</groupId>
