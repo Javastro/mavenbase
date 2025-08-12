@@ -6,7 +6,7 @@
    <modelVersion>4.0.0</modelVersion>
    <groupId>org.javastro</groupId>
    <artifactId>javastro-mavenbase</artifactId>
-   <version>2025.2</version>
+   <version>2025.3</version>
    <packaging>pom</packaging>
    <name>mavenbase</name>
    <description>Base POM for a collection of JVM based astronomical software</description>
@@ -26,7 +26,7 @@
          <dependency>
             <groupId>org.javastro</groupId>
             <artifactId>bom</artifactId>
-            <version>2025.2</version>
+            <version>2025.3</version>
             <type>pom</type>
             <scope>import</scope>
          </dependency>
