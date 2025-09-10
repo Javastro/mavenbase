@@ -6,7 +6,7 @@
    <modelVersion>4.0.0</modelVersion>
    <groupId>org.javastro</groupId>
    <artifactId>javastro-mavenbase</artifactId>
-   <version>2025.3</version>
+   <version>2025.4</version>
    <packaging>pom</packaging>
    <name>mavenbase</name>
    <description>Base POM for a collection of JVM based astronomical software</description>
@@ -14,7 +14,7 @@
    <inceptionYear>2010</inceptionYear>
    <properties>
    <!-- these have to be repeated from the bom unfortunately - perhaps resolve in bom -->
-      <hibernate.version>6.2.7.Final</hibernate.version>
+      <hibernate.version>6.5.3.Final</hibernate.version>
       <eclipselink.version>2.7.7</eclipselink.version>
       <jackson.version>2.15.1</jackson.version>
       <jaxb-ri.version>4.0.2</jaxb-ri.version>
@@ -26,7 +26,7 @@
          <dependency>
             <groupId>org.javastro</groupId>
             <artifactId>bom</artifactId>
-            <version>2025.3</version>
+            <version>2025.4</version>
             <type>pom</type>
             <scope>import</scope>
          </dependency>
