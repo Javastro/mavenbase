@@ -6,7 +6,7 @@
    <modelVersion>4.0.0</modelVersion>
    <groupId>org.javastro</groupId>
    <artifactId>bom</artifactId>
-   <version>2025.4</version>
+   <version>2026.1</version>
    <packaging>pom</packaging>
    <name>bom</name>
    <description>Versions of the Javastro Software</description>
@@ -26,29 +26,34 @@
            <dependency>
             <groupId>org.javastro</groupId>
             <artifactId>jsofa</artifactId>
-            <version>20210512</version>
+            <version>20231011</version>
          </dependency>
           <dependency> 
             <groupId>org.javastro.ivoa</groupId>
             <artifactId>ivoa-schema</artifactId>
-            <version>0.9.10</version>
+            <version>0.9.12</version>
          </dependency>
           <dependency> 
             <groupId>org.javastro.ivoa</groupId>
             <artifactId>ivoa-entities</artifactId>
-            <version>0.9.12</version>
+            <version>0.9.13</version>
          </dependency>
-       <dependency> 
-         <groupId>org.javastro</groupId>
-         <artifactId>jaxbjpa-utils</artifactId>
-         <version>0.2.5</version>
-      </dependency>
-      
-      <!-- important external dependencies -->
+           <dependency>
+             <groupId>org.javastro</groupId>
+             <artifactId>jaxbjpa-utils</artifactId>
+             <version>0.2.5</version>
+          </dependency>
+         <dependency>
+             <groupId>org.javastro.ivoa.vo-dml</groupId>
+             <artifactId>vodml-runtime</artifactId>
+             <version>0.8.9</version>
+         </dependency>
+
+             <!-- important external dependencies -->
              <dependency>
                  <groupId>uk.ac.starlink</groupId>
                  <artifactId>stil</artifactId>
-                 <version>4.3.3</version>
+                 <version>4.3.4</version>
              </dependency>
 
       <!-- other standard libs -->
