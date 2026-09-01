@@ -13,7 +13,7 @@
    <properties>
       <eclipselink.version>2.7.7</eclipselink.version>
       <hibernate.version>7.2.6.Final</hibernate.version>
-      <jackson.version>2.15.1</jackson.version>
+      <jackson.version>2.18.9</jackson.version>
       <jaxb-ri.version>4.0.2</jaxb-ri.version>
       <jaxb-api.version>4.0.0</jaxb-api.version>
 
