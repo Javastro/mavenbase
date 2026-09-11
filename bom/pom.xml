@@ -6,13 +6,13 @@
    <modelVersion>4.0.0</modelVersion>
    <groupId>org.javastro</groupId>
    <artifactId>bom</artifactId>
-   <version>2026.2</version>
+   <version>2026.3</version>
    <packaging>pom</packaging>
    <name>bom</name>
    <description>Versions of the Javastro Software</description>
    <properties>
       <eclipselink.version>2.7.7</eclipselink.version>
-      <hibernate.version>7.2.6.Final</hibernate.version>
+      <hibernate.version>7.2.14.Final</hibernate.version>
       <jackson.version>2.15.1</jackson.version>
       <jaxb-ri.version>4.0.2</jaxb-ri.version>
       <jaxb-api.version>4.0.0</jaxb-api.version>
@@ -36,7 +36,7 @@
           <dependency> 
             <groupId>org.javastro.ivoa</groupId>
             <artifactId>ivoa-entities</artifactId>
-            <version>0.9.14</version>
+            <version>0.9.15</version>
          </dependency>
            <dependency>
              <groupId>org.javastro</groupId>
